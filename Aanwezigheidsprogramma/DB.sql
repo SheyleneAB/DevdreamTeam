@@ -37,7 +37,7 @@ IF OBJECT_ID('[dbo].[Groep]', 'U') IS NOT NULL
 -- Maak de tabel Groep
 CREATE TABLE [dbo].[Groep]
 (
-    [id] INT NOT NULL,
+    [id] INT NOT NULL IDENTITY,
     [naam] NVARCHAR(255) NOT NULL,
     PRIMARY KEY ([id])
 );
@@ -45,7 +45,7 @@ CREATE TABLE [dbo].[Groep]
 -- Maak de tabel Gebruiker
 CREATE TABLE [dbo].[Gebruiker]
 (
-    [id] INT NOT NULL,
+    [id] INT NOT NULL IDENTITY,
     [naam] NVARCHAR(255) NOT NULL,
     [voornaam] NVARCHAR(255) NOT NULL,
     [adres] NVARCHAR(255) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE [dbo].[Gebruiker]
 -- Maak de tabel Event
 CREATE TABLE [dbo].[Event]
 (
-    [id] INT NOT NULL,
+    [id] INT NOT NULL IDENTITY,
     [naam] NVARCHAR(255) NOT NULL,
     [plaats] NVARCHAR(255) NOT NULL,
     [startDatumTijd] DATETIME NOT NULL,
